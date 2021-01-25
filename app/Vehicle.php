@@ -3,7 +3,7 @@
 namespace Vehicles;
 class Vehicle
 {
-    protected $make;
+    protected $brand;
     protected $model;
     protected $price;
     protected $weight;
@@ -13,16 +13,16 @@ class Vehicle
     protected $description;
 
 
-    public function __construct($make, $model)
+    public function __construct($brand, $model)
     {
-        $this->make = $make;
+        $this->brand = $brand;
         $this->model = $model;
     }
 
     public function getVehicleData()
     {
         return $vehicleData = [
-            $this->make,
+            $this->brand,
             $this->model,
             $this->price,
             $this->weight,

@@ -6,23 +6,23 @@ namespace Vehicles;
 
 class Motorcycle extends Vehicle
 {
-    private $type;
+    private $color;
     private $year;
 
-    public function __construct($make, $model, $type, $year)
+    public function __construct($brand, $model, $color, $year)
     {
-        parent::__construct($make, $model);
+        parent::__construct($brand, $model);
 
-        $this -> type = $type;
+        $this -> color = $color;
         $this->year = $year;
     }
 
     public function getVehicleData()
     {
         return $vehicleData = [
-            $this->make,
+            $this->brand,
             $this->model,
-            $this -> type,
+            $this -> color,
             $this -> year,
             $this->price,
             $this->weight,

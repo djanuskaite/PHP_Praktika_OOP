@@ -6,21 +6,21 @@ namespace Vehicles;
 
 class Bicycle extends Vehicle
 {
-    private $numberOfGears;
+    private $pedals;
 
-    public function __construct($make, $model, $numberOfGears)
+    public function __construct($brand, $model, $pedals)
     {
-        parent::__construct($make, $model);
+        parent::__construct($brand, $model);
 
-        $this->numberOfGears= $numberOfGears;
+        $this->pedals= $pedals;
     }
 
     public function getVehicleData()
     {
         return $vehicleData = [
-            $this->make,
+            $this->brand,
             $this->model,
-            $this -> numberOfGears,
+            $this -> pedals,
             $this->price,
             $this->weight,
             $this->engine,

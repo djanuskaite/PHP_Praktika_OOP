@@ -6,23 +6,23 @@ namespace Vehicles;
 
 class Car extends Vehicle
 {
-    private $drivenWheels;
+    private $gearbox;
     private $year;
 
-    public function __construct($make, $model, $drivenWheels, $year)
+    public function __construct($brand, $model, $gearbox, $year)
     {
-        parent::__construct($make, $model);
+        parent::__construct($brand, $model);
 
-        $this->drivenWheels = $drivenWheels;
+        $this->gearbox = $gearbox;
         $this->year = $year;
     }
 
     public function getVehicleData()
     {
         return $vehicleData = [
-            $this->make,
+            $this->brand,
             $this->model,
-            $this -> drivenWheels,
+            $this -> gearbox,
             $this -> year,
             $this->price,
             $this->weight,
