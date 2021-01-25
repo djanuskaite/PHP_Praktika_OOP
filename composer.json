@@ -1,0 +1,9 @@
+{
+  "autoload": {
+    "name" : "PHP_Praktika_OOP",
+    "description" : "description",
+    "psr-4": {
+      "Vehicles\\" :"app"
+    }
+  }
+}
