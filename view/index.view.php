@@ -16,7 +16,6 @@
     <?php
 
     use Vehicles\Car;
-
     $vehicle1 = new Car('Subaru', 'Forester', "Manual", 2017);
     $vehicle1->addOtherVehicleData(28453, 3700, "yes",
         137, 5, 'The 2017 Subaru Forester was built in Gunma, Japan.');
@@ -27,7 +26,9 @@
     $vehicle3->addOtherVehicleData(1750, 1520, "yes",
         108, 5, 'Tino was a mildly successful 5-door MPV Nissan made between 2000 - 2006.');
 
+
     ?>
+
     <h2 class="row d-flex justify-content-center">Cars</h2>
     <table class='table table-bordered text-center table-hover table-responsive'>
         <thead class="thead-dark">
@@ -46,19 +47,13 @@
         </thead>
         <tbody>
         <tr>
-            <?php foreach ($vehicle1->getVehicleData() as $value): ?>
-                <td><?= $value; ?></td>
-            <?php endforeach; ?>
+           <?php \Vehicles\Show::ShowData($vehicle1 -> getVehicleData());?>
         </tr>
         <tr>
-            <?php foreach ($vehicle2->getVehicleData() as $value): ?>
-                <td><?= $value; ?></td>
-            <?php endforeach; ?>
+            <?php \Vehicles\Show::ShowData($vehicle2 -> getVehicleData());?>
         </tr>
         <tr>
-            <?php foreach ($vehicle3->getVehicleData() as $value): ?>
-                <td><?= $value; ?></td>
-            <?php endforeach; ?>
+            <?php \Vehicles\Show::ShowData($vehicle3 -> getVehicleData());?>
         </tr>
         </tbody>
     </table>
